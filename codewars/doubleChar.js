@@ -17,6 +17,6 @@ function doubleChar(str) {
   return str.join('')
 }
 
-// Best Answer
+// Best Answer 
 
 const doubleChar = (str) => str.split("").map(c => c + c).join("");
