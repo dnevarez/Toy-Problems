@@ -4,7 +4,7 @@
 // 'abba' & 'baab' == true
 //
 // 'abba' & 'bbaa' == true
-//
+// 
 // 'abba' & 'abbba' == false
 // Write a function that will find all the anagrams of a word from a list.
 // You will be given two inputs a word and an array with words. You should
