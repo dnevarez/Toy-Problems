@@ -17,29 +17,3 @@
 // the given arrays.
 //
 // Have fun coding it and please don't forget to vote and rank this kata! :-)
-
-// My Answer
-
-function getLengthOfMissingArray(arrayOfArrays) {
-	if(arrayOfArrays){
-	if (arrayOfArrays.length === 0 ) return 0;
-	var length = []
-   	arrayOfArrays.forEach(function(x){
-	   	if(x) length.push(x.length)
-	   	return 0;
-   })
-   if (length.indexOf(0) === -1) {
-	  for(var i = Math.min(...length); i < Math.max(...length); i++){
-	   	if (length.indexOf(i) === -1) return i;
-	     }
-	   }
-	}
-   	return 0
-}
-
-// Best Answers
-
-function getLengthOfMissingArray(arr) {
-  return !arr||(ar=arr.map((x,i)=>x?x.length:0).sort((a,b)=>a-b)).indexOf(0)>-1
-         ?0:ar.filter((x,i)=>x!=i+ar[0]).concat([1])[0]-1
-}

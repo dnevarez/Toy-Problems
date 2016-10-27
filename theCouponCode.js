@@ -8,22 +8,3 @@
 //
 // A coupon expires at the END of the expiration date. All dates will be passed in
 // as strings in this format: "June 15, 2014"
-
-
-// My Answer
-
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
-  var formatCurrentDate = new Date(currentDate);
-  var formatExpDate = new Date(expirationDate);
-  console.log(enteredCode, correctCode, currentDate, expirationDate)
-  if (enteredCode === correctCode && formatCurrentDate.getTime() <= formatExpDate.getTime()) {
-    return true;
-    }
-    return false
-}
-
-// Best Answer
-
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
-  return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
-}

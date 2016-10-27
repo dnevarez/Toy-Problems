@@ -30,30 +30,3 @@
 // 6.325624, 43.34345.345
 // 0, 1,2
 // 0.342q0832, 1.2324
-
-// My Answer
-
-function isValidCoordinates(coordinates){
-	if(/-\s/.test(coordinates) || /[A-z]/.test(coordinates)) return false;
-	let str = coordinates.split(', ')
-	if((str[0] >= -90 && str[0] <= 90) && (str[1] >= -180 && str[1] <= 180)){
-		return true
-	}
-	return false
-}
-
-// Best Practice
-
-function isValidCoordinates(coordinates){
-  var match = coordinates.match(/^[-]?(\d+(?:\.\d+)?), [-]?(\d+(?:\.\d+)?)$/);
-  if (!match) { return false; }
-  var lat = Math.abs(parseFloat(match[1]));
-  var lng = Math.abs(parseFloat(match[2]));
-  return lat >= 0 && lat <= 90 && lng >= 0 && lng <= 180;
-}
-
-// Shortest
-
-function isValidCoordinates(coordinates){
-  return /^-?((\d)|([0-8]\d)|(90))(\.\d+)?, ?-?((\d\d?)|(1[0-7]\d)|(180))(\.\d+)?$/.test(coordinates)
-}

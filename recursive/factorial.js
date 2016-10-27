@@ -11,22 +11,3 @@
 //
 // You have to create the function factorial that receives n and returns n!.
 // You have to use recursion.
-
-
-// My Answer
-
-const factorial = n => {
-  if (n < 0) return -1;
-  else if (n === 0) return 1;
-  else return (n * factorial(n - 1))
-};
-
-// Best Answer
-
-const factorial = n => n > 1 ? n*factorial(n-1) : 1;
-
-// 2nd Best Answer
-
-const factorial = n => {
-  return n>1? n*factorial(n-1) : 1;
-};

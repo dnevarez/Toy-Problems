@@ -16,29 +16,3 @@
 // anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']
 //
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
-
-// My Answer
-
-function anagrams(word, words) {
-  var arr = []
-  word = word.split('').sort().join('')
-  words.forEach(function(x, y){ if(word === x.split('').sort().join('')) {arr.push(x) }})
-  return arr
-}
-
-// Best Solution
-
-String.prototype.sort = function() {
-  return this.split("").sort().join("");
-};
-
-function anagrams(word, words) {
-  return words.filter(function(x) {
-      return x.sort() === word.sort();
-  });
-}
-
-function anagrams(word, words) {
-  word = word.split('').sort().join('');
-  return words.filter(function(v) {return word == v.split('').sort().join('');});
-}

@@ -8,28 +8,3 @@
 // alphabet should be shifted, like in the original Rot13 "implementation".
 //
 // Please note that using "encode" in Python is considered cheating.
-
-// My Answer
-
-function rot13(message){
-  var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  return message.split('').map((x) => { if(alpha.indexOf(x.toLowerCase()) !== -1){
- 	  if(x === x.toLowerCase()){
-    	x = alpha[alpha.indexOf(x.toLowerCase()) + 13];
-    	return x;
-   	}
-   	else if (x === x.toUpperCase()){
-   		  	x = alpha[alpha.indexOf(x.toLowerCase()) + 13];
-    	return x.toUpperCase();
-   	}
-  }
-  	else return x
-  }).join('');
-
-  // Best Practice
-
-function rot13(message) {
-  var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  var b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
-  return message.replace(/[a-z]/gi, c => b[a.indexOf(c)])
-}

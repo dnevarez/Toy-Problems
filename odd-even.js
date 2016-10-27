@@ -1,7 +1,7 @@
 // Description:
 //
 // Given a string S. You have to return another string such that even-indexed
-// and odd-indexed characters of S are grouped and groups are space-separated 
+// and odd-indexed characters of S are grouped and groups are space-separated
 // (see sample below)
 //
 // Note:
@@ -19,14 +19,3 @@
 // Even indices 0, 2, 4, 6, so we have 'CdWr' as the first group
 // odd ones are 1, 3, 5, 7, so the second group is 'oeas'
 // And the final string to return is 'Cdwr oeas'
-
-// My solution
-
-function sortMyString(S) {
-	let evens = [];
-	let odds = [];
-	S.split('').forEach(function(x, i){ if (i % 2 === 0){evens.push(x)} else {odds.push(x)}})
-	return evens.join('') + ' ' + odds.join('')
-}
-
-// Best solution

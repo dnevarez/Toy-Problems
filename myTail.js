@@ -7,8 +7,3 @@
 // If the tail is right return true, else return false.
 //
 // The arguments will always be strings, and normal letters.
-
-
-function correctTail(body, tail) {
-  return body.substr(body.length-tail.length) === tail;
-}

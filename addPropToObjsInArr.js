@@ -27,21 +27,3 @@
 //     usersAnswer: null
 // }];
 // The questions array is already defined for you and is not the same as the one in the example.
-
-
-// My Answer. Way overcomplicated.
-
-function addAnswer(array) {
-  for (var i = 0; i < array.length; i++) {
-    array[i]['usersAnswer'] = null;
-   }
-   return array
- }
-
- // Best Answer
- 
-questions.forEach(x => x.usersAnswer = null);
-
-questions.forEach(function (i) {
-         i.usersAnswer = null;
-     });

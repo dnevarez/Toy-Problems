@@ -22,29 +22,3 @@
 // removeSmallest([1,2,3,4,5]) = [2,3,4,5]
 // removeSmallest([5,3,2,1,4]) = [5,3,2,4]
 // removeSmallest([2,2,1,2,1]) = [2,2,2,1]
-
-
-// My Answer
-
-
-
-function removeSmallest(numbers) {
-  numbers.splice(numbers.indexOf(Math.min.apply(Math, numbers)), 1);
-  return numbers
-}
-
-// Best Answers
-
-// Highest for best practice
-function removeSmallest(numbers) {
-  let indexOfMin = numbers.indexOf(Math.min(...numbers));
-  return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
-}
-
-function removeSmallest(numbers) {
-  numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
-  return numbers;
-}
-
-
-const removeSmallest = (e) => (e.splice(e.indexOf(Math.min.apply(Math, e)),1), e);

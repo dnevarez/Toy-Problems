@@ -24,20 +24,3 @@
 //
 // [("az", "toto picaro zone kiwi"), ("az toto", "picaro zone kiwi"),
 // ("az toto picaro", "zone kiwi"), ("az toto picaro zone", "kiwi")]
-
-
-
-
-// My Answer
-function partlist(arr) {
-	var newArr =[]
-	// newArr.push([arr.slice(0, 1), arr.slice(1, arr.length)])
-    for(var i = 1; i < arr.length; i++){
-    	newArr.push([arr.slice(0, i).join(' '), arr.slice(i, arr.length).join(' ')])
-    }
-    return newArr
-}
-
-
-//Best Answer
-var partlist=a=>a.map((v,i)=>[a.slice(0,i).join(' '),a.slice(i).join(' ')]).slice(1)

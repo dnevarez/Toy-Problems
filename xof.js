@@ -21,26 +21,3 @@
 // expressions to be evaluated. Your xor function should have the behaviour
 // described above, returning true if exactly one of the two expressions evaluate
 // to true, false otherwise.
-
-
-
-
-// My Answer
-
-function xor(a, b) {
-  // TODO: Program Me
-  if (a && b === true) return false
-  if (a || b) {
-    return true
-  }
-  return false
-}
-
-
-// Best Answer
-
-const xor = (a, b) => a!=b;
-
-function xor(a, b) {
-  return a != b;
-}
