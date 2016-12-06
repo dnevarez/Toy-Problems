@@ -2,8 +2,6 @@
 // Arithmetic(6).add(9).subtract(4).add(7).val() => 18
 
 
-// My Answer
-
 (function () {
 
    function Arithmetic(number) {
