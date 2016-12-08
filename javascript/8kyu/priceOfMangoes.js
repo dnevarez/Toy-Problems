@@ -14,3 +14,7 @@ function mango(quantity, price){
 }
 
 // Best Answer
+
+function mango(quantity, price){
+  return price * (quantity - Math.floor(quantity / 3));
+}

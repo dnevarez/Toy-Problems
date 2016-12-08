@@ -13,3 +13,7 @@ function swapValues() {
 }
 
 // Best Answer
+
+function swapValues() {
+  return arguments[0].reverse();
+}

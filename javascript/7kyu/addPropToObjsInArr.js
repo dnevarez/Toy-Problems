@@ -40,3 +40,7 @@ function addAnswer(array) {
 addAnswer(questions)
 
 // Best Answer
+
+questions.forEach(function (i) {
+        i.usersAnswer = null;
+    });

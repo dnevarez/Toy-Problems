@@ -35,3 +35,7 @@ function xor(a, b) {
 }
 
 // Best Answer
+
+function xor(a, b) {
+  return a != b;
+}
