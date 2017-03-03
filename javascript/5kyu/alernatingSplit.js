@@ -13,3 +13,11 @@
 // For both methods:
 // If the input-string is null or empty return exactly this value!
 // If n is <= 0 then return the input text.
+
+function encrypt(text, n){
+
+}
+
+function decrypt(encryptedText, n){
+  
+}
